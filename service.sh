@@ -1,12 +1,12 @@
 #!/system/bin/sh
-/data/adb/resetprop ro.boot.flash.locked 1
-/data/adb/resetprop ro.boot.verifiedbootstate green
-/data/adb/resetprop ro.secureboot.lockstate locked
-/data/adb/resetprop ro.boot.vbmeta.device_state locked
-/data/adb/resetprop -n ro.boot.vbmeta.invalidate_on_error yes
-/data/adb/resetprop -n ro.boot.vbmeta.avb_version 2.0
-/data/adb/resetprop -n ro.boot.vbmeta.hash_alg sha256
-/data/adb/resetprop -n ro.boot.vbmeta.size 65536
+/data/adb/ksu/bin/resetprop ro.boot.flash.locked 1
+/data/adb/ksu/bin/resetprop ro.boot.verifiedbootstate green
+/data/adb/ksu/bin/resetprop ro.secureboot.lockstate locked
+/data/adb/ksu/bin/resetprop ro.boot.vbmeta.device_state locked
+/data/adb/ksu/bin/resetprop -n ro.boot.vbmeta.invalidate_on_error yes
+/data/adb/ksu/bin/resetprop -n ro.boot.vbmeta.avb_version 2.0
+/data/adb/ksu/bin/resetprop -n ro.boot.vbmeta.hash_alg sha256
+/data/adb/ksu/bin/resetprop -n ro.boot.vbmeta.size 65536
 
 WUNNING=0
 
